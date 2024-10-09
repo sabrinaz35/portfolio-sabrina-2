@@ -1,0 +1,211 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing:border-box;
+    text-decoration: none;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400..900&display=swap');
+
+main h1, h2, p, a {
+    font-family: 'Playfair-display', serif;
+    font-weight: 400;
+}
+
+h1, h2 {
+    margin: 0 5vw 0 0;
+    font-size: xx-large;
+}
+
+.mask1 { /* Voor de swirl over de foto heen */
+    -webkit-mask-image: url(images/swirl.png);
+    mask-image: url(images/swirl.png);
+    mask-repeat: no-repeat;
+    z-index: -1; /* Zorgt ervoor dat het naar de achtergrond gaat */
+    top: 0%;
+  }
+
+article {
+    display: flex;
+    flex-wrap:nowrap;
+    align-items: center;
+}
+
+section img{
+    position: relative;
+    z-index: -1;
+}
+
+section h2 {
+    position: absolute;
+    top: 125%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+nav, footer{
+    background-color: #685F5F;
+    width: 100%;
+    padding: 20px 20px 20px 20px;
+}
+
+nav {
+    position: fixed;
+}
+
+header nav ul, footer>ul{
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    /* Misschien kijken of ik die afbeelding kan masken in de css, mocht ik hem willen veranderen dat alleen de afbeelding gedaan moet worden*/
+}
+
+nav a {
+    font-size: large;
+    color: #ffffff;
+}
+
+section>img {
+    width: 100vw;
+    margin-top: -8.5px;
+    height: 100vh;
+}
+
+.about-me p {
+    position: absolute;
+    top: 145%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: x-large;
+}
+
+.about-me img:nth-child(2){
+    position: absolute;
+    top: 135%;
+    left: 5%;
+    width: 20vw;
+    height: 45vh;
+}
+
+.about-me img:last-of-type{
+    position: absolute;
+    top: 95%;
+    right: 2%;
+    height: 70vh;
+    width: 35vw;
+}
+
+section p {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: large;
+}
+
+.projecten h1, .mijn-werk h1, .contact h1{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Code input veld bij contact 
+Deze code heb ik van w3Schools: https://www.w3schools.com/howto/howto_css_contact_form.asp */
+.contactform {
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+  }
+
+input[type=submit] {
+    background-color: #685F5F;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+
+  .containerprojecten {
+    position: absolute;
+    top: 30%;
+    left: 20%;
+    display: flex;
+    align-items: center;
+  }
+
+  .front > img {
+    height: 35vh; 
+    width: 30vw;
+    border-radius: 10px;
+    /* Misschien in plaats van die border een schadow of een andere kleur */
+  }
+
+/* Code voor de card rotation van: https://codepen.io/8manteam/pen/LYoKavX  */
+
+.cardBox {
+    float: left;
+    margin: 1% 0 0 1%;
+    perspective: 800px;
+    transition: all 0.3s ease 0s;
+    width: 30vw;
+  }
+  
+  .cardBox:hover .card {
+    transform: rotateY(180deg);
+  }
+  
+  .card {
+    background: #685F5F;
+    border-radius: 10px;
+    height: 35vh;
+    transform-style: preserve-3d;
+    transition: transform 0.4s ease 0s;
+    width: 30vw;
+  }
+
+  .card p {
+    margin:1.8em 0 1.8em 0;
+    
+  }
+
+  .card .front,
+.card .back {
+  backface-visibility: hidden;
+  box-sizing: border-box;
+  color: white;
+  display: block;
+  font-size: 1.2em;
+  height: 100%;
+  border-radius: 10px;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+
+.card .back {
+    transform: rotateY(180deg);
+  }
+
+  .card .back a:hover {
+  background: #fff;
+  color: #333;
+  text-shadow: 0 0 1px #333;
+}
+  
