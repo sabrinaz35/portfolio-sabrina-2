@@ -23,6 +23,7 @@ h1, h2 {
     mask-repeat: no-repeat;
     z-index: -1; /* Zorgt ervoor dat het naar de achtergrond gaat */
     top: 0%;
+
   }
 
 article {
@@ -208,4 +209,12 @@ input[type=submit] {
   color: #333;
   text-shadow: 0 0 1px #333;
 }
-  
+
+
+/* pagina pollution party */
+.uitlegpollution p {
+  position: relative;
+  left: 25%;
+  width: 35vw;
+  margin: 6em;
+}
