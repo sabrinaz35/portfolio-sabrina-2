@@ -17,6 +17,10 @@ h1, h2 {
     font-size: xx-large;
 }
 
+h3 {
+  margin-top: 1em ;
+}
+
 .mask1 { /* Voor de swirl over de foto heen */
     -webkit-mask-image: url(images/swirl.png);
     mask-image: url(images/swirl.png);
@@ -142,7 +146,6 @@ input[type=submit] {
     cursor: pointer;
   }
 
-
   .containerprojecten {
     position: absolute;
     top: 30%;
@@ -158,8 +161,7 @@ input[type=submit] {
     /* Misschien in plaats van die border een schadow of een andere kleur */
   }
 
-/* Code voor de card rotation van: https://codepen.io/8manteam/pen/LYoKavX  */
-
+/* Code voor de card rotation van: https://codepen.io/8manteam/pen/LYoKavX met eigen aanpassingen natuurlijk */
 .cardBox {
     float: left;
     margin: 1% 0 0 1%;
@@ -182,8 +184,7 @@ input[type=submit] {
   }
 
   .card p {
-    margin:1.8em 0 1.8em 0;
-    
+    margin:4em 0 2em 0;
   }
 
   .card .front,
@@ -210,6 +211,13 @@ input[type=submit] {
   text-shadow: 0 0 1px #333;
 }
 
+.back a {
+  color: #333;
+  background-color:#F0E9E3; 
+  padding: 5px;
+  border-radius: 10px ;
+}
+
 /* pagina pollution party */
 .uitlegpollution p {
   position: relative;
@@ -217,3 +225,8 @@ input[type=submit] {
   width: 35vw;
   margin: 6em;
 }
+
+.back img {
+  margin: 1em;
+}
+
