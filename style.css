@@ -116,50 +116,30 @@ section p {
     transform: translate(-50%, -50%);
 }
 
-/* Code input veld bij contact 
-Deze code heb ik van w3Schools: https://www.w3schools.com/howto/howto_css_contact_form.asp */
-.contactform {
-    display: flex;
-    flex-wrap: wrap;
-    position: absolute;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+/* nog even naar kijken klopt nog niet helemaal */
+.contact div {
+  display: flex;
+  flex-wrap: wrap;
+  border: solid #685F5F;
+  background-color: #F0E9E3;
+  position: relative;
 }
 
-input[type=text], select, textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    box-sizing: border-box;
-    margin-top: 6px;
-    margin-bottom: 16px;
+
+.containerprojecten {
+  position: absolute;
+  top: 30%;
+  left: 20%;
+  display: flex;
+  align-items: center;
   }
 
-input[type=submit] {
-    background-color: #685F5F;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-  }
-
-  .containerprojecten {
-    position: absolute;
-    top: 30%;
-    left: 20%;
-    display: flex;
-    align-items: center;
-  }
-
-  .front > img {
-    height: 35vh; 
-    width: 30vw;
-    border-radius: 10px;
+.front > img {
+  height: 35vh; 
+  width: 30vw;
+  border-radius: 10px;
     /* Misschien in plaats van die border een schadow of een andere kleur */
-  }
+}
 
 /* Code voor de card rotation van: https://codepen.io/8manteam/pen/LYoKavX met eigen aanpassingen natuurlijk */
 .cardBox {
