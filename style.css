@@ -220,11 +220,18 @@ section p {
 }
 
 /* pagina pollution party */
-.uitlegpollution p {
+.uitlegpollution {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
   position: relative;
-  left: 25%;
+  transform: translate(-50%, -50%);
+}
+
+.uitlegpollution {
   width: 35vw;
   margin: 6em;
+  top: 45%;
 }
 
 .back img {
