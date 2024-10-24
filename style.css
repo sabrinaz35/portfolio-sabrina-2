@@ -116,6 +116,13 @@ section p {
     transform: translate(-50%, -50%);
 }
 
+.projecten2 h1, .projecten h2 {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 /* nog even naar kijken staat naast elkaar moet onder elkaar komen te staan */
 .contact div {
   display: flex;
@@ -144,6 +151,15 @@ section p {
   width: 30vw;
   border-radius: 10px;
     /* Misschien in plaats van die border een schadow of een andere kleur */
+}
+
+.pollution img{
+  width: 40vw;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
 }
 
 /* Code voor de card rotation van: https://codepen.io/8manteam/pen/LYoKavX met eigen aanpassingen natuurlijk */
@@ -214,4 +230,6 @@ section p {
 .back img {
   margin: 1em;
 }
+
+
 
