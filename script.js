@@ -14,8 +14,9 @@ let pollutionpartyArray = ["pollutionparty.png", "hond-boos.jpeg", "hond-tong.jp
 let timer = setInterval (veranderPlaatje, 500)
 
 function veranderPlaatje () {
-    if (timer == 0){
-        document.querySelector(".pollutionafbeelding").src= 'images/'+pollutionpartyArray[0];
-        console.log("verandering plaatje ");
-    }
+    let i;
+    for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
 }
+
