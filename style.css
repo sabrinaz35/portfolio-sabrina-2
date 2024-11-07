@@ -25,7 +25,7 @@ h3 {
     -webkit-mask-image: url(images/swirl.png);
     mask-image: url(images/swirl.png);
     mask-repeat: no-repeat;
-    z-index: -1; /* Zorgt ervoor dat het naar de achtergrond gaat */
+    z-index: -4; /* Zorgt ervoor dat het naar de achtergrond gaat */
     top: 0%;
     margin-top: 2em;
   }
@@ -220,34 +220,70 @@ section p {
   border-radius: 10px ;
 }
 
-/* pagina pollution party */
-.pollution {
-  display: flex;
-  justify-content: center;
-}
-
-.pollution img {
+/* pagina pollution party, met code van https://www.w3schools.com/howto/howto_js_slideshow.asp  */
+/* Slideshow container */
+.slideshow-container {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   z-index: 1;
 }
 
-.uitlegpollution p{
-  position: relative;
-  transform: translate(-50%, -50%);
-  top: 5%;
+/* Hide the images by default */
+
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: #F0E9E3;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
 }
 
-.uitlegpollution {
-  width: 35vw;
-  margin: 6em;
-  top: 10%;
-  justify-items: center;
-  display: flex;
-  align-items: center;
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
 }
 
-.back img {
-  margin: 1em;
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: #685F5F;
 }
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #F0E9E3;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
 
 
 
