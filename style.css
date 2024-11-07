@@ -1,20 +1,27 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing:border-box;
-    text-decoration: none;
+  padding: 0;
+  margin: 0;
+  box-sizing:border-box;
+  text-decoration: none;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Croissant+One&family=Playfair+Display:wght@400..900&display=swap');
 
-main h1, h2, p, a {
-    font-family: 'Playfair-display', serif;
-    font-weight: 400;
+main, h2, p, a {
+  font-family: 'Playfair-display', serif;
+  font-weight: 200;
 }
 
 h1, h2 {
-    margin: 0 5vw 0 0;
-    font-size: xx-large;
+  margin: 0 5vw 0 0;
+  font-size: xx-large;
+  font-family: "Croissant One", 'Times New Roman', Times, serif;
+}
+
+article  h1 {
+  width: 15em;
+  margin-left: 5vw;
 }
 
 h3 {
@@ -22,18 +29,18 @@ h3 {
 }
 
 .mask1 { /* Voor de swirl over de foto heen */
-    -webkit-mask-image: url(images/swirl.png);
-    mask-image: url(images/swirl.png);
-    mask-repeat: no-repeat;
-    z-index: -4; /* Zorgt ervoor dat het naar de achtergrond gaat */
-    top: 0%;
-    margin-top: 2em;
+  -webkit-mask-image: url(images/swirl.png);
+  mask-image: url(images/swirl.png);
+  mask-repeat: no-repeat;
+  z-index: -4; /* Zorgt ervoor dat het naar de achtergrond gaat */
+  top: 0%;
+  margin-top: 2em;
   }
 
 article {
-    display: flex;
-    flex-wrap:nowrap;
-    align-items: center;
+  display: flex;
+  flex-wrap:nowrap;
+  align-items: center;
 }
 
 section img{
@@ -282,6 +289,15 @@ section p {
 @keyframes fade {
   from {opacity: .4}
   to {opacity: 1}
+}
+
+.uitlegpollution {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-wrap: wrap;
 }
 
 
