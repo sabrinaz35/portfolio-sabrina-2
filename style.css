@@ -53,6 +53,7 @@ nav, footer{
     background-color: #685F5F;
     width: 100%;
     padding: 20px 20px 20px 20px;
+    z-index: 3;
 }
 
 nav {
@@ -220,18 +221,28 @@ section p {
 }
 
 /* pagina pollution party */
-.uitlegpollution {
+.pollution {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
+}
+
+.pollution img {
+  z-index: 1;
+}
+
+.uitlegpollution p{
   position: relative;
   transform: translate(-50%, -50%);
+  top: 5%;
 }
 
 .uitlegpollution {
   width: 35vw;
   margin: 6em;
-  top: 45%;
+  top: 10%;
+  justify-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .back img {
