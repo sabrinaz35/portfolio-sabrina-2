@@ -8,9 +8,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Croissant+One&family=Playfair+Display:wght@400..900&display=swap');
 
-main, h2, p, a {
+main, h1, h2, p, a {
   font-family: 'Playfair-display', serif;
   font-weight: 200;
+  line-height: 1.5em;
 }
 
 h1, h2 {
@@ -19,13 +20,18 @@ h1, h2 {
   font-family: "Croissant One", 'Times New Roman', Times, serif;
 }
 
-article  h1 {
-  width: 15em;
-  margin-left: 5vw;
+h1 {
+  font-size: 35px;
 }
 
 h3 {
-  margin-top: 1em ;
+  margin-top: 1em;
+  font-family: "Croissant One", 'Times New Roman', Times, serif;
+}
+
+article  h1 {
+  width: 15em;
+  margin-left: 5vw;
 }
 
 .mask1 { /* Voor de swirl over de foto heen */
@@ -49,79 +55,79 @@ section img{
 }
 
 section h2 {
-    position: absolute;
-    top: 125%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: -1;
+  position: absolute;
+  top: 125%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
 }
 
 nav, footer{
-    background-color: #685F5F;
-    width: 100%;
-    padding: 20px 20px 20px 20px;
-    z-index: 3;
+  background-color: #685F5F;
+  width: 100%;
+  padding: 20px 20px 20px 20px;
+  z-index: 3;
 }
 
 nav {
-    position: fixed;
+  position: fixed;
 }
 
 header nav ul, footer>ul{
-    display: flex;
-    justify-content: space-around;
-    list-style-type: none;
-    /* Misschien kijken of ik die afbeelding kan masken in de css, mocht ik hem willen veranderen dat alleen de afbeelding gedaan moet worden*/
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
 }
 
 nav a {
-    font-size: large;
-    color: #ffffff;
+  font-size: large;
+  color: #ffffff;
 }
 
 section>img {
-    width: 100vw;
-    margin-top: -8.5px;
-    height: 100vh;
+  width: 100vw;
+  margin-top: -8.5px;
+  height: 100vh;
 }
 
 .about-me p {
-    position: absolute;
-    top: 145%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: x-large;
+  position: absolute;
+  top: 145%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: large;
+  width: 60ch;
 }
 
 .about-me img:nth-child(2){
-    position: absolute;
-    top: 135%;
-    left: 5%;
-    width: 20vw;
-    height: 45vh;
+  position: absolute;
+  top: 135%;
+  left: 5%;
+  width: 20vw;
+  height: 45vh;
 }
 
 .about-me img:last-of-type{
-    position: absolute;
-    top: 95%;
-    right: 2%;
-    height: 70vh;
-    width: 35vw;
+  position: absolute;
+  top: 95%;
+  right: 2%;
+  height: 70vh;
+  width: 35vw;
 }
 
 section p {
-    position: absolute;
-    top: 25%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: large;
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: large;
 }
 
 .projecten h1, .mijn-werk h1, .contact h1{
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .projecten2 h1, .projecten h2 {
@@ -129,6 +135,10 @@ section p {
   top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.projecten2 img {
+  height: 110vh;
 }
 
 /* nog even naar kijken staat naast elkaar moet onder elkaar komen te staan */
@@ -172,29 +182,29 @@ section p {
 
 /* Code voor de card rotation van: https://codepen.io/8manteam/pen/LYoKavX met eigen aanpassingen natuurlijk */
 .cardBox {
-    float: left;
-    margin: 1% 0 0 1%;
-    perspective: 800px;
-    transition: all 0.3s ease 0s;
-    width: 30vw;
+  float: left;
+  margin: 1% 0 0 1%;
+  perspective: 800px;
+  transition: all 0.3s ease 0s;
+  width: 30vw;
+}
+  
+.cardBox:hover .card {
+  transform: rotateY(180deg);
   }
   
-  .cardBox:hover .card {
-    transform: rotateY(180deg);
-  }
-  
-  .card {
-    background: #685F5F;
-    border-radius: 10px;
-    height: 35vh;
-    transform-style: preserve-3d;
-    transition: transform 0.4s ease 0s;
-    width: 30vw;
-  }
+.card {
+  background: #685F5F;
+  border-radius: 10px;
+  height: 35vh;
+  transform-style: preserve-3d;
+  transition: transform 0.4s ease 0s;
+  width: 30vw;
+}
 
-  .card p {
-    margin:4em 0 2em 0;
-  }
+.card p {
+  margin:4em 0 2em 0;
+}
 
   .card .front,
 .card .back {
@@ -214,7 +224,7 @@ section p {
     transform: rotateY(180deg);
   }
 
-  .card .back a:hover {
+.card .back a:hover {
   background: #fff;
   color: #333;
   text-shadow: 0 0 1px #333;
@@ -224,14 +234,18 @@ section p {
   color: #333;
   background-color:#F0E9E3; 
   padding: 5px;
-  border-radius: 10px ;
+  border-radius: 10px;
+}
+
+.back p {
+  width: 30ch;
 }
 
 /* pagina pollution party, met code van https://www.w3schools.com/howto/howto_js_slideshow.asp  */
 /* Slideshow container */
-.slideshow-container {
+.slideshow-container, .zebinterface {
   position: absolute;
-  top: 35%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1;
@@ -298,7 +312,10 @@ section p {
   transform: translate(-50%, -50%);
   display: flex;
   flex-wrap: wrap;
+  margin-top: 3em;
 }
+
+
 
 
 
