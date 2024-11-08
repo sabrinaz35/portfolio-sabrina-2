@@ -145,15 +145,20 @@ section p {
 .contact div {
   display: flex;
   border: solid #685F5F;
-  padding: 5%;
+  padding: 5% 12% 5% 7%;
   background-color: #F0E9E3;
   position: absolute;
   top: 40%;
   left: 50%;
   border-radius: 10px;
   transform: translate(-50%, -50%);
-  margin-top: 20px;
+  margin: 20px;
   list-style-type: none;
+}
+
+.contactlist{
+  flex-wrap: wrap;
+  width: 3em;
 }
 
 .containerprojecten {
@@ -178,6 +183,16 @@ section p {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: -1;
+}
+
+.uitlegpollution {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 3em;
 }
 
 /* Code voor de card rotation van: https://codepen.io/8manteam/pen/LYoKavX met eigen aanpassingen natuurlijk */
@@ -251,9 +266,6 @@ section p {
   z-index: 1;
 }
 
-/* Hide the images by default */
-
-
 /* Next & previous buttons */
 .prev, .next {
   cursor: pointer;
@@ -304,19 +316,3 @@ section p {
   from {opacity: .4}
   to {opacity: 1}
 }
-
-.uitlegpollution {
-  position: absolute;
-  top: 80%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 3em;
-}
-
-
-
-
-
-
