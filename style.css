@@ -34,6 +34,50 @@ article  h1 {
   margin-left: 5vw;
 }
 
+p {
+  font-size: 25px;
+}
+
+
+
+/* navigatie en footer */
+
+nav, footer{
+  background-color: #685F5F;
+  width: 100%;
+  padding: 20px 20px 20px 20px;
+  z-index: 3;
+}
+
+nav {
+  position: fixed;
+}
+
+header nav ul, footer>ul{
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+}
+
+nav a {
+  font-size: 25px;
+  color: #ffffff;
+}
+
+footer{
+  position: absolute;
+  bottom: 0;
+}
+
+/* nav a:hover {
+  transform: scale(1.5);
+} */
+
 .mask1 { /* Voor de swirl over de foto heen */
   -webkit-mask-image: url(images/swirl.png);
   mask-image: url(images/swirl.png);
@@ -62,27 +106,6 @@ section h2 {
   z-index: -1;
 }
 
-nav, footer{
-  background-color: #685F5F;
-  width: 100%;
-  padding: 20px 20px 20px 20px;
-  z-index: 3;
-}
-
-nav {
-  position: fixed;
-}
-
-header nav ul, footer>ul{
-  display: flex;
-  justify-content: space-around;
-  list-style-type: none;
-}
-
-nav a {
-  font-size: large;
-  color: #ffffff;
-}
 
 section>img {
   width: 100vw;
@@ -138,7 +161,7 @@ section p {
 }
 
 .projecten2 img {
-  height: 110vh;
+  height: 100vh;
 }
 
 /* nog even naar kijken staat naast elkaar moet onder elkaar komen te staan */
@@ -187,7 +210,7 @@ section p {
 
 .uitlegpollution {
   position: absolute;
-  top: 80%;
+  top: 88%;
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
