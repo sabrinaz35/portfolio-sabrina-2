@@ -67,11 +67,16 @@ body {
   background-color: var(--background-color);
 }
 
+main {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
 section:first-of-type {
   background-color: var(--background-color);
   display: flex;
   justify-content: center;
-  max-width: 60rem;
 }
 
 section:first-of-type div, [class="home"] section:first-of-type ul{
@@ -107,6 +112,12 @@ section:first-of-type>img {
   border: 1px solid hotpink;
     box-shadow: 0px 3px 31px hotpink;
     margin: 2rem
+}
+
+@media (width>850px) {
+  section:first-of-type>img {
+    max-width: 20rem;
+  }
 }
 
 section:nth-of-type(2) {
