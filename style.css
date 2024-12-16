@@ -37,7 +37,7 @@ p, ul li {
 
 /* Vormgeving van de header */
 header nav {
-  border-bottom: 2px solid hotpink;
+  border-bottom: 1px solid white;
 }
 header nav ul{
   display: flex;
@@ -96,13 +96,14 @@ section:first-of-type div, [class="home"] section:first-of-type ul{
   max-width: 3rem;
 }
 
-section:first-of-type div > button {
+section:first-of-type div > a {
   background-color: hotpink;
   color: white;
   padding: .6rem;
   border-radius: .5rem;
   margin: 1rem;
   border: none;
+  font-family: var(--fonts-text);
 }
 
 
@@ -219,8 +220,10 @@ section:nth-of-type(2) p {
   padding: 1rem;
  }
 
-  /* Detailpagina zoek een boek */
+  /* Detailpagina pollution party */
 
-
+[class="pollutionparty"] section:nth-of-type(2) > img {
+  width: 40rem;
+}
 
 
