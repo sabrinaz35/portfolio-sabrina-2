@@ -96,7 +96,7 @@ section:first-of-type div, [class="home"] section:first-of-type ul{
   max-width: 3rem;
 }
 
-section:first-of-type div > a {
+[class="home"] section:first-of-type div > a {
   background-color: hotpink;
   color: white;
   padding: .6rem;
@@ -107,7 +107,7 @@ section:first-of-type div > a {
 }
 
 
-section:first-of-type>img {
+[class="home"] section:first-of-type>img {
   max-width: 50vw;
   border-radius: 100px 0;
   border: 1px solid hotpink;
@@ -115,8 +115,12 @@ section:first-of-type>img {
     margin: 2rem
 }
 
+section:first-of-type>img {
+  max-width: 50vw;
+}
+
 @media (width>850px) {
-  section:first-of-type>img {
+  [class="home"] section:first-of-type>img {
     max-width: 20rem;
   }
 }
