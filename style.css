@@ -11,17 +11,20 @@
 :root{
   --font-headers: "Croissant One", "Times New Roman", Times, serif;
   --font-size-small: 20px;
-  --background-color: #F0E9E3;
+  --background-color: #f6f2ef;
   --text-color: black;
-  --element-color: #685F5F;
+  --element-color: #8f788d;
   --fonts-text: "Open sans", "serif"; 
 }
 
+
+/* #685F5F; donkerbruin */
 /* algemene vormgeving */
 h1 {
   font-family: var(--font-headers);
-  font-size: 30px;
+  font-size: 37px;
   text-align: center;
+  padding:1rem;
 }
 
 h2 {
@@ -33,6 +36,7 @@ p, ul li {
   font-size: var(--font-size-small);
   font-family:Verdana, Geneva, Tahoma, sans-serif;
   list-style-type: none;
+  max-width: 60vw;
 }
 
 /* Vormgeving van de header */
@@ -62,21 +66,37 @@ footer {
   justify-content: center;
 }
 
-/* Pagina 1 */
+
 body {
   background-color: var(--background-color);
 }
 
 main {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+section {
+  padding: 1rem;
+  padding: 1rem;
+  align-items: center;
+  display: flex;
   flex-direction: column;
 }
 
-section:first-of-type {
+section img {
+  max-width: 50vw;
+}
+
+
+
+/* Pagina Homepagina  */
+[class="home"] section:first-of-type {
   background-color: var(--background-color);
   display: flex;
   justify-content: center;
+  flex-direction: row;
 }
 
 section:first-of-type div, [class="home"] section:first-of-type ul{
@@ -97,7 +117,7 @@ section:first-of-type div, [class="home"] section:first-of-type ul{
 }
 
 [class="home"] section:first-of-type div > a {
-  background-color: hotpink;
+  background-color: #d180ac;
   color: white;
   padding: .6rem;
   border-radius: .5rem;
@@ -110,12 +130,22 @@ section:first-of-type div, [class="home"] section:first-of-type ul{
 [class="home"] section:first-of-type>img {
   max-width: 50vw;
   border-radius: 100px 0;
-  border: 1px solid hotpink;
-    box-shadow: 0px 3px 31px hotpink;
+  border: 1px solid #d180ac;
+    box-shadow: 0px 3px 31px #d180ac;
     margin: 2rem
 }
+@media (width<555px){
+  [class="home"] section:first-of-type {
+    flex-direction: column;
+    align-items: center;
+  }
 
-section:first-of-type>img {
+  p {
+   font-size: 15px;
+  }
+
+}
+[class="home"] section:first-of-type>img {
   max-width: 50vw;
 }
 
@@ -135,6 +165,8 @@ section:nth-of-type(2) {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 60vw;
+  border-radius: 20px;
 }
 
 section:nth-of-type(2) p {
@@ -147,6 +179,7 @@ section:nth-of-type(2) p {
 /* Contactpagina */
 [class="contactpagina"] section,  [class="zoekeenboek"] section {
   flex-direction: column;
+  display: flex;
   justify-content: center;
   align-items: center;
   padding: 2rem;
@@ -155,7 +188,9 @@ section:nth-of-type(2) p {
 [class="contactpagina"] section ul {
   margin-top: 3rem;
   padding: 3rem;
-  border: 6px dotted hotpink;
+  background-color: var(--element-color);
+  border-radius: 20px;
+  color: white;
 }
 
 
@@ -172,30 +207,24 @@ section:nth-of-type(2) p {
 
 
 /* Projecten pagina */
-[class="mijnprojectenpagina"] section, [class="pollutionparty"] section:nth-of-type(1), [class="mojo"] section:nth-of-type(1){
-  flex-direction: column;
-  padding: 1rem;
-  align-items: center;
-  gap: 1rem;
-}
-
-@media (width<600px) {
-  [class="mijnprojectenpagina"] article {
-    flex-direction: column;
-  }
-}
 
  [class="mijnprojectenpagina"] article a{ 
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   padding: 1rem;
-  color: var(--text-color);
+  color: white;
+  align-items: center;
+  background-color: #d180ac ;
+  border-radius: 1rem;
+  width: 60vw;
  }
 
  [class="mijnprojectenpagina"] article:nth-of-type(2) a{
   background-color: var(--element-color);
-  color: white;
-  border-radius: 1rem;
+ }
+
+ [class="mijnprojectenpagina"] article:nth-of-type(3) a {
+  background-color: #bd99a2;
  }
 
  [class="mijnprojectenpagina"] article:nth-of-type(3) img, [class="mojo"] img{
@@ -203,24 +232,24 @@ section:nth-of-type(2) p {
   width: fit-content;
  }
 
- [class="mijnprojectenpagina"] article img {
-  max-width: 30rem;
- }
-
- @media (width< 500px) {
-  [class="mijnprojectenpagina"] article img{
-    max-width: 10rem;
-  }
- }
-
  [class="mijnprojectenpagina"] article div {
   max-width: 45vw;
  }
 
+ 
+
+
+ /* Algemene code voor de detailpagina's */
+ section article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+ }
 
  /* Detailpagina zoek een boek */
  [class="zoekeenboek"] iframe {
-  width: 70vw;
+  width: 60vw;
   padding: 1rem;
  }
 
@@ -228,6 +257,28 @@ section:nth-of-type(2) p {
 
 [class="pollutionparty"] section:nth-of-type(2) > img {
   width: 40rem;
+}
+
+
+
+/* Dit is even een uitprobeersel */
+[class="pollutionparty"] section:first-of-type div img {
+
+  border-radius: 20px;
+}
+
+[class="pollutionparty"] section:first-of-type > div {
+  position: relative;
+}
+
+[class="pollutionparty"] section:first-of-type h1 {
+  position: absolute;
+  top: 50;
+  border-radius: 20px;
+  background-color: rgba(189, 153, 162, .9);
+  padding: 3rem;
+  backdrop-filter: blur(.5px);
+  color: white;
 }
 
 
