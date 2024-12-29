@@ -290,9 +290,11 @@ section:nth-of-type(2) p {
   padding: 1rem;
  }
 
+ [class="zoekeenboek"] section:nth-of-type(2) article > div {
+  display: flex;
+ }
 
-
-
+ 
 
   /* Detailpagina pollution party */
 
