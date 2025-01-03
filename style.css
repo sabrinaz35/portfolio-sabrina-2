@@ -54,7 +54,7 @@ header nav ul{
   display: flex;
   justify-content: space-around;
   font-size: var(--font-size-small);
-  padding: 1rem;
+  padding: 1.5rem;
   background-color: var(--second-color);
 }
 
@@ -63,7 +63,17 @@ header nav ul li a{
 }
 
 article div > img:hover {
-  transform: scale(200%);
+  transform: scale(150%);
+  transition: 1s ease;
+}
+
+header nav ul li:hover {
+  transform: scale(125%);
+  transition: 1s ease;
+}
+
+a:hover {
+  transform: scale(110s%);
   transition: 1s ease;
 }
 
@@ -83,7 +93,6 @@ footer {
 footer li, footer p {
   font-size: 15px;
 }
-
 
 
 
@@ -144,7 +153,7 @@ section:first-of-type div p {
   max-width: 3rem;
 }
 
-[class="home"] section:first-of-type div > a, [class="contactpagina"] main section:nth-of-type(2) a, .mojo section:nth-of-type(3) a{
+[class="home"] section:first-of-type div > a, [class="contactpagina"] main section div a, .mojo section:nth-of-type(3) a{
   background-color: #d180ac;
   color: white;
   padding: .6rem;
@@ -199,7 +208,11 @@ section:first-of-type div p {
   flex-wrap: wrap;
 }
 
-[class="home"] main section:nth-of-type(2)>  div article {
+[class="home"] main section:nth-of-type(2) > div article div {
+  padding: .9rem;
+}
+
+[class="home"] main section:nth-of-type(2) > div article {
   max-width: 22rem;
 }
 
@@ -311,7 +324,7 @@ section:nth-of-type(2) p {
   padding: 1rem;
  }
 
- section:nth-of-type(2) article{
+ section:nth-of-type(2) article {
   width: 80vw;
  }
 
@@ -332,6 +345,17 @@ section:nth-of-type(2) article > div {
   width: 40rem;
 }
 
+.pollutionparty section:first-of-type article:first-of-type ul li {
+  list-style-type: circle;
+}
+
+.pollutionparty section:nth-of-type(2) article:last-of-type img  {
+  width: 40vw;
+}
+
+.pollutionparty section:nth-of-type(2) article:nth-of-type(3) img {
+  width: 55vw;
+}
 
   /* Detailpagina mojo */
 
