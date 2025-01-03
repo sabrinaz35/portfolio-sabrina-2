@@ -208,6 +208,14 @@ section:first-of-type div p {
   flex-wrap: wrap;
 }
 
+.home section:nth-of-type(2) article {
+  padding: 1rem;
+}
+
+.home section:nth-of-type(2) article div {
+  max-width: 90vw;
+}
+
 [class="home"] main section:nth-of-type(2) > div article div {
   padding: .9rem;
 }
@@ -221,6 +229,10 @@ section:first-of-type div p {
   max-height: 22vh;
 }
 
+
+.home section:nth-of-type(2) article a {
+  color: black;
+}
 
 section:nth-of-type(2) p {
   line-height: 1.5em;
