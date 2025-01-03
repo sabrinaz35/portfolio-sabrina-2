@@ -15,6 +15,7 @@
   --text-color: black;
   --element-color: #8f788d;
   --fonts-text: "Open sans", "serif"; 
+  --second-color: #d1c7c0;
 }
 
 
@@ -32,6 +33,11 @@ h2 {
   font-size: 25px;
 }
 
+h3 {
+  font-size: 24px;
+  padding: 1rem;
+}
+
 p, ul li, a {
   font-size: var(--font-size-small);
   font-family:Verdana, Geneva, Tahoma, sans-serif;
@@ -43,34 +49,43 @@ p, ul li, a {
 header nav {
   border-bottom: 1px solid white;
 }
+
 header nav ul{
   display: flex;
   justify-content: space-around;
   font-size: var(--font-size-small);
-  background-color: var(--background-color);
   padding: 1rem;
+  background-color: var(--second-color);
 }
 
 header nav ul li a{
   color: var(--text-color);
 }
 
+article div > img:hover {
+  transform: scale(200%);
+  transition: 1s ease;
+}
 
 /* Vormgeving footer */
 
 footer {
-  position: fixed;
+  position: absolute;
   bottom: 0;
   background-color: var(--background-color);
   width: 100vw;
   padding: .8rem;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
-footer li {
+footer li, footer p {
   font-size: 15px;
 }
+
+
+
 
 .mijnprojectenpagina {
   position: relative;
@@ -80,6 +95,7 @@ footer li {
 body {
   background-color: var(--background-color);
   padding-bottom: 5rem;
+  position: relative;
 }
 
 main {
@@ -89,7 +105,6 @@ main {
 }
 
 section {
-  padding: 4rem;
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -99,22 +114,25 @@ section img {
   max-width: 50vw;
 }
 
-
-
 /* Pagina Homepagina  */
 [class="home"] section:first-of-type, [class="contactpagina"] section:first-of-type {
   background-color: var(--background-color);
   display: flex;
   justify-content: center;
   flex-direction: row;
+  padding: 5rem 2.5rem;
 }
 
 section:first-of-type div, [class="home"] section:first-of-type ul{
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   padding: 1rem;
+}
+
+
+section:first-of-type div p {
+  margin-top: 1rem;
 }
 
 [class="home"] section:first-of-type ul{
@@ -126,7 +144,7 @@ section:first-of-type div, [class="home"] section:first-of-type ul{
   max-width: 3rem;
 }
 
-[class="home"] section:first-of-type div > a, [class="contactpagina"] main section:nth-of-type(2) a {
+[class="home"] section:first-of-type div > a, [class="contactpagina"] main section:nth-of-type(2) a, .mojo section:nth-of-type(3) a{
   background-color: #d180ac;
   color: white;
   padding: .6rem;
@@ -193,7 +211,6 @@ section:first-of-type div, [class="home"] section:first-of-type ul{
 
 section:nth-of-type(2) p {
   line-height: 1.5em;
-  max-width: 30rem;
   padding: 1rem 0;
 }
 
@@ -255,17 +272,19 @@ section:nth-of-type(2) p {
   padding: 2rem;
  }
 
- /* Detailpagina zoek een boek */
- [class="zoekeenboek"] section:nth-of-type(1)>div img {
+ /* Detailpagina zoek een boek en de andere pagina's detail */
+ /* Als ik tijd heb dit even allemaal opschonen met evt een andere css stylesheet */
+ [class="zoekeenboek"] section:nth-of-type(1)>div img, [class="pollutionparty"] section:nth-of-type(1)>div img,  [class="mojo"] section:nth-of-type(1)>div img {
   max-width: 100vw;
  }
 
- [class="zoekeenboek"] section:nth-of-type(1)>div {
+ [class="zoekeenboek"] section:nth-of-type(1)>div,  [class="pollutionparty"] section:nth-of-type(1)>div,  [class="mojo"] section:nth-of-type(1)>div  {
   position: relative;
+  padding-top: 0;
  }
 
  @media (width>60em) {
-  [class="zoekeenboek"] section:nth-of-type(1) div > img {
+  [class="zoekeenboek"] section:nth-of-type(1) div > img, [class="pollutionparty"] section:nth-of-type(1) div > img, [class="mojo"] section:nth-of-type(1) div > img  {
     height: 50rem;
     object-fit: cover;
     object-position: 50% 20%;
@@ -273,24 +292,35 @@ section:nth-of-type(2) p {
   }
  }
 
- [class="zoekeenboek"] section:nth-of-type(1) div > h1 {
+ [class="zoekeenboek"] section:nth-of-type(1) div > h1,  [class="pollutionparty"] section:nth-of-type(1) div > h1, [class="mojo"] section:nth-of-type(1) div > h1 {
   position: absolute;
   bottom: 0;
   z-index: 2;
   background-color: var(--background-color);
   width: 100vw;
   border-radius: 30px;
-  box-shadow: 10px 5px 5px gray;
- }
+  box-shadow: 10px 5px 5px gray; 
+}
 
 
+
+ /* details van zoek een boek pagina */
 
  [class="zoekeenboek"] iframe {
   width: 60vw;
   padding: 1rem;
  }
 
- [class="zoekeenboek"] section:nth-of-type(2) article > div {
+ section:nth-of-type(2) article{
+  width: 80vw;
+ }
+
+section:nth-of-type(2) img{
+  width: 36vw;
+  padding: 1rem;
+ }
+
+section:nth-of-type(2) article > div {
   display: flex;
  }
 
@@ -303,25 +333,14 @@ section:nth-of-type(2) p {
 }
 
 
+  /* Detailpagina mojo */
 
-/* Dit is even een uitprobeersel */
-[class="pollutionparty"] section:first-of-type div img {
+  video {
+    width: 36vw;
+  }
 
-  border-radius: 20px;
-}
-
-[class="pollutionparty"] section:first-of-type > div {
-  position: relative;
-}
-
-[class="pollutionparty"] section:first-of-type h1 {
-  position: absolute;
-  top: 50;
-  border-radius: 20px;
-  background-color: rgba(189, 153, 162, .9);
-  padding: 3rem;
-  backdrop-filter: blur(.5px);
-  color: white;
-}
+  .mojo section p {
+    padding: .5rem;
+  }
 
 
