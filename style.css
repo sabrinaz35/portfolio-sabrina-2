@@ -19,7 +19,6 @@
 }
 
 
-/* #685F5F; donkerbruin */
 /* algemene vormgeving */
 h1 {
   font-family: var(--font-headers);
@@ -35,16 +34,17 @@ h2 {
 
 h3 {
   font-size: 24px;
-  padding: 1rem;
 }
 
 p, ul li, a {
   font-size: var(--font-size-small);
   font-family:Verdana, Geneva, Tahoma, sans-serif;
   list-style-type: none;
-  max-width: 60vw;
 }
 
+p, li {
+  line-height: 1.5em;
+}
 /* Vormgeving van de header */
 header nav {
   border-bottom: 1px solid white;
@@ -73,8 +73,7 @@ header nav ul li:hover {
 }
 
 a:hover {
-  transform: scale(110s%);
-  transition: 1s ease;
+  transform: scale(110%) 1s ease;
 }
 
 /* Vormgeving footer */
@@ -192,51 +191,23 @@ section:first-of-type div p {
   }
 }
 
-/* [class="home"] main section:nth-of-type(2) {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-}
-
-[class="home"] main section:nth-of-type(2) h2{
-  grid-area: 1 / 1 / 2 / 4;
-} */
 
 [class="home"] main section:nth-of-type(2) > div {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  display: grid;
+  width: 90vw;
+  grid-template-columns: repeat(auto-fit, minmax(30vw, 1fr));
 }
 
-.home section:nth-of-type(2) article {
-  padding: 1rem;
+[class="home"] main section:nth-of-type(2) > div img {
+  max-width: 20vw;
 }
-
-.home section:nth-of-type(2) article div {
-  max-width: 90vw;
-}
-
-[class="home"] main section:nth-of-type(2) > div article div {
-  padding: .9rem;
-}
-
-[class="home"] main section:nth-of-type(2) > div article {
-  max-width: 22rem;
-}
-
-[class="home"] main section:nth-of-type(2)> div article img {
-  max-width: 25vw;
-  max-height: 22vh;
-}
-
 
 .home section:nth-of-type(2) article a {
   color: black;
 }
 
-section:nth-of-type(2) p {
-  line-height: 1.5em;
-  padding: 1rem 0;
+.home section article {
+  width: 40vw;
 }
 
 
@@ -259,7 +230,16 @@ section:nth-of-type(2) p {
   padding: .5rem;
 }
 
+section:first-of-type div div {
+  width: 40vw;
+}
+
 /* Projecten pagina */
+
+.mijnprojectenpagina article{
+  display: flex;
+  justify-content: center;
+}
 
  [class="mijnprojectenpagina"] article a{ 
   display: flex;
@@ -291,10 +271,8 @@ section:nth-of-type(2) p {
 
  /* Algemene code voor de detailpagina's */
  section article {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 2rem;
+  padding: 2.5rem 0rem;
+  max-width: 80vw;
  }
 
  /* Detailpagina zoek een boek en de andere pagina's detail */
@@ -306,15 +284,6 @@ section:nth-of-type(2) p {
  [class="zoekeenboek"] section:nth-of-type(1)>div,  [class="pollutionparty"] section:nth-of-type(1)>div,  [class="mojo"] section:nth-of-type(1)>div  {
   position: relative;
   padding-top: 0;
- }
-
- @media (width>60em) {
-  [class="zoekeenboek"] section:nth-of-type(1) div > img, [class="pollutionparty"] section:nth-of-type(1) div > img, [class="mojo"] section:nth-of-type(1) div > img  {
-    height: 50rem;
-    object-fit: cover;
-    object-position: 50% 20%;
-    width: 100vw;
-  }
  }
 
  [class="zoekeenboek"] section:nth-of-type(1) div > h1,  [class="pollutionparty"] section:nth-of-type(1) div > h1, [class="mojo"] section:nth-of-type(1) div > h1 {
@@ -333,50 +302,48 @@ section:nth-of-type(2) p {
 
  [class="zoekeenboek"] iframe {
   width: 60vw;
-  padding: 1rem;
  }
 
  section:nth-of-type(2) article {
-  width: 80vw;
+  max-width: 80vw;
+
  }
 
-section:nth-of-type(2) img{
-  width: 36vw;
-  padding: 1rem;
+ section:nth-of-type(2) article article {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20vw, 1fr));
  }
 
-section:nth-of-type(2) article > div {
-  display: flex;
+ section:nth-of-type(2) article article img {
+  max-width: 35vw;
  }
-
  
 
   /* Detailpagina pollution party */
 
-[class="pollutionparty"] section:nth-of-type(2) > img {
-  width: 40rem;
-}
 
 .pollutionparty section:first-of-type article:first-of-type ul li {
   list-style-type: circle;
 }
 
-.pollutionparty section:nth-of-type(2) article:last-of-type img  {
-  width: 40vw;
+.pollutionparty section:nth-of-type(2) > div {
+  max-width: 80vw;
 }
-
-.pollutionparty section:nth-of-type(2) article:nth-of-type(3) img {
-  width: 55vw;
-}
-
   /* Detailpagina mojo */
 
   video {
-    width: 36vw;
+  width: 36vw;
+}
+
+
+@media (width>60em) {
+  [class="zoekeenboek"] section:nth-of-type(1) div > img, [class="pollutionparty"] section:nth-of-type(1) div > img, [class="mojo"] section:nth-of-type(1) div > img  {
+    height: 50rem;
+    object-fit: cover;
+    object-position: 50% 20%;
+    width: 100vw;
   }
-
-  .mojo section p {
-    padding: .5rem;
+  section article, .pollutionparty section:nth-of-type(2) > div, section:nth-of-type(2) article  {
+    max-width: 70vw;
   }
-
-
+ }
