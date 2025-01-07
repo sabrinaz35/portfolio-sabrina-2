@@ -10,7 +10,7 @@
 
 :root{
   --font-headers: "Croissant One", "Times New Roman", Times, serif;
-  --font-size-small: 20px;
+  --font-size-small: 19px;
   --background-color: #f6f2ef;
   --text-color: black;
   --element-color: #8f788d;
@@ -364,6 +364,9 @@ section:first-of-type div div {
   box-shadow: 10px 5px 5px gray; 
 }
 
+.pollutionparty section:first-of-type article:first-of-type p{
+  padding:0;
+}
 
  /* details van zoek een boek pagina */
 
@@ -387,19 +390,48 @@ section:first-of-type div div {
   border: solid 1.5px var(--roze-color);
  }
  
+ .mojo section:first-of-type  article:first-of-type p, .zoekeenboek section:first-of-type  article:first-of-type p{
+  padding: 0;
+  align-items: flex-start;
+  width: 80vw;
+ }
 
   /* Detailpagina pollution party */
-.pollutionparty section:first-of-type article:first-of-type ul li {
+  .pollutionparty section:first-of-type div:nth-of-type(2) {
+    flex-direction: row;
+    align-items: flex-start;
+    width: 60vw;
+    justify-content: space-between;
+    gap: 5rem;
+  }
+ 
+
+  .pollutionparty section:first-of-type div:nth-of-type(2) article:first-of-type p{
+    padding: 0;
+    margin-top: 0;
+  }
+
+  .pollutionparty section:first-of-type div:nth-of-type(2) article:first-of-type p:first-of-type {
+    margin-top: 2.5rem;
+  }
+
+.pollutionparty section:first-of-type article:nth-of-type(2) ul li {
   list-style-type: circle;
 }
 
-.pollutionparty section:first-of-type article:first-of-type ul {
+.pollutionparty section:first-of-type article:nth-of-type(2) ul {
   padding-left: 1.5rem;
 }
 
 .pollutionparty section:nth-of-type(2) > div {
   max-width: 80vw;
 }
+
+
+
+
+
+
   /* Detailpagina mojo */
 
   video {
@@ -421,6 +453,9 @@ section:first-of-type div div {
   }
   section article, .pollutionparty section:nth-of-type(2) > div, section:nth-of-type(2) article  {
     max-width: 60vw;
+  }
+  .mojo section:first-of-type  article:first-of-type p, .zoekeenboek section:first-of-type  article:first-of-type p {
+    width: 80vw;
   }
  }
 
