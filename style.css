@@ -449,13 +449,13 @@ section:first-of-type div div {
     object-fit: cover;
     object-position: 50% 20%;
     width: 100vw;
-  }
+  } 
   section article, .pollutionparty section:nth-of-type(2) > div, section:nth-of-type(2) article  {
     max-width: 60vw;
   }
   .mojo section:first-of-type  article:first-of-type p, .zoekeenboek section:first-of-type  article:first-of-type p {
     width: 80vw;
-  }
+  } 
  }
 
  @media (width<555px){
@@ -480,3 +480,36 @@ section:first-of-type div div {
     max-width: 90vw;
   }
 }
+
+
+/* Detailpagina public city jazz */
+
+.public-city-jazz section > div img {
+object-position: none;
+}
+
+ .langeImage > img {
+  display: block; 
+  width: 100%;
+
+ }
+
+ .langeImage {
+  width: 100%;
+  height: 500px; 
+  overflow: auto;
+  scroll-behavior: smooth;
+ }
+
+ .pcj-laatsteimgs {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+  justify-content: center;
+  margin-top: 1rem;
+ }
+
+ .pcj-laatsteimgs img {
+  max-width: 10%;
+  height: fit-content;
+ }
