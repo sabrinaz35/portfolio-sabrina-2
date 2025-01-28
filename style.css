@@ -303,6 +303,12 @@ section:first-of-type div div {
 
 /* Projecten pagina */
 
+.mijnprojectenpagina section div:nth-of-type(2) {
+  display: grid;
+  width: 90vw;
+  grid-template-columns: repeat(auto-fit, minmax(40vw, 1fr));
+}
+
 .mijnprojectenpagina article{
   display: flex;
   justify-content: center;
@@ -316,7 +322,7 @@ section:first-of-type div div {
   align-items: center;
   background-color: #d180ac ;
   border-radius: 1rem;
-  width: 60vw;
+  max-width: 40vw;
  }
 
  [class="mijnprojectenpagina"] article:nth-of-type(2) a{
@@ -328,9 +334,8 @@ section:first-of-type div div {
  }
 
  
-
- [class="mijnprojectenpagina"] article div {
-  max-width: 45vw;
+ [class="mijnprojectenpagina"] article a img {
+  max-width: 28vw;
  }
 
  
@@ -476,8 +481,18 @@ section:first-of-type div div {
     grid-template-columns: repeat(auto-fit, minmax(100vw, 1fr));
   }
 
-  [class="home"] main section:nth-of-type(2) > div img {
+  [class="home"] main section:nth-of-type(2) > div img, .mijnprojectenpagina section div:nth-of-type(2) a img {
     max-width: 90vw;
+  } 
+  .mijnprojectenpagina section div:nth-of-type(2) {
+    grid-template-columns: repeat(auto-fit, minmax(100vw, 1fr));
+  } 
+  .mijnprojectenpagina section div:nth-of-type(2) a {
+    min-width: 95vw;
+  }
+  .mijnprojectenpagina section div:nth-of-type(2) a div h2, .mijnprojectenpagina section div:nth-of-type(2) a div p {
+    min-width: 90vw;
+    text-align: center;
   }
 }
 
